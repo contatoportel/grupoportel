@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUPO PORTEL - Médico de Negócios | Um médico sabe o problema antes do paciente dizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Letra branca */
+        }
+        .text-cyan-400 {
+            color: #22d3ee; /* Azul ciano para destaque */
+        }
+        .bg-cyan-600 {
+            background-color: #0891b2; /* Azul ciano mais escuro para botões/destaque */
+        }
+        .hover\:bg-cyan-700:hover {
+            background-color: #0e7490;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <aside class="fixed h-full w-64 bg-gray-900 text-white p-6 hidden md:flex flex-col">
+        <div class="flex items-center mb-10">
+        <img src="imagens/capivara.png" alt="Logo GRUPO PORTEL" class="w-20 h-20 mr-0">            <h2 class="text-2xl font-bold text-cyan-400">GRUPO PORTEL</h2>
+        </div>
+        <nav class="flex-grow">
+            <ul class="space-y-4">
+                <li><a href="#inicio" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out">Início</a></li>
+                <li><a href="#servicos" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out">Serviços</a></li>
+                <li><a href="#sobre" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out">Sobre Nós</a></li>
+                <li><a href="artigos.html" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out">Artigos</a></li>
+                <li><a href="#contato" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="mt-auto">
+            <a href="https://instagram.com/grupoportel" target="_blank" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.715.01 3.657.042 3.658.118 5.378 1.838 5.498 5.498.032.942.042 1.227.042 3.657s-.01 2.715-.042 3.657c-.118 3.658-1.838 5.378-5.498 5.498-.942.032-1.227.042-3.657.042s-2.715-.01-3.657-.042c-3.658-.118-5.378-1.838-5.498-5.498-.032-.942-.042-1.227-.042-3.657s.01-2.715.042-3.657c.118-3.658 1.838-5.378 5.498-5.498.942-.032 1.227-.042 3.657-.042ZM12 4.417c-2.841 0-3.111.01-4.029.043C4.09 4.606 2.656 6.039 2.523 7.971c-.033.918-.043 1.189-.043 4.029s.01 3.111.043 4.029c.133 1.932 1.566 3.366 3.498 3.498.918.033 1.189.043 4.029.043s3.111-.01 4.029-.043c1.932-.133 3.366-1.566 3.498-3.498.033-.918.043-1.189.043-4.029s-.01-3.111-.043-4.029c-.133-1.932-1.566-3.366-3.498-3.498-.918-.033-1.189-.043-4.029-.043Zm0 2.227c3.084 0 5.589 2.505 5.589 5.589S15.084 18.005 12 18.005 6.411 15.499 6.411 12 8.916 6.644 12 6.644Zm0 2.227c-1.854 0-3.362 1.508-3.362 3.362s1.508 3.362 3.362 3.362 3.362-1.508 3.362-3.362-1.508-3.362-3.362-3.362Zm5.725-4.851A1.31 1.31 0 0 1 18.31 5.31c-.347 0-.629.282-.629.629s.282.629.629.629c.347 0 .629-.282.629-.629a1.31 1.31 0 0 1-1.309-1.31Z" clip-rule="evenodd"></path></svg>
+                Instagram
+            </a>
+        </div>
+    </aside>
+
+    <div class="flex-grow md:ml-64">
+        <header class="bg-gray-900 text-white p-4 flex justify-between items-center md:hidden">
+            <h1 class="text-xl font-bold text-cyan-400">GRUPO PORTEL</h1>
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </header>
+
+        <nav id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-gray-900 text-white p-6 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+            <div class="flex justify-end mb-8">
+                <button id="close-mobile-menu" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="space-y-4">
+                <li><a href="#inicio" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out" onclick="toggleMobileMenu()">Início</a></li>
+                <li><a href="#servicos" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out" onclick="toggleMobileMenu()">Serviços</a></li>
+                <li><a href="#sobre" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out" onclick="toggleMobileMenu()">Sobre Nós</a></li>
+                <li><a href="#artigos" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out" onclick="toggleMobileMenu()">Artigos</a></li>
+                <li><a href="#contato" class="block py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 ease-in-out" onclick="toggleMobileMenu()">Contato</a></li>
+            </ul>
+        </nav>
+
+
+        <section id="inicio" class="flex flex-col md:flex-row items-center justify-center min-h-[calc(100vh-64px)] p-8 text-center md:text-left">
+            <div class="md:w-1/2 md:pr-12 animate-fade-in-up">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
+                    Seu Negócio Precisa de um <span class="block text-cyan-400">Médico de Negócios</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-6">
+                    "Um médico sabe o problema antes do paciente dizer."
+                </p>
+                <p class="text-lg text-gray-400 mb-8">
+                    Não deixe seu faturamento estagnar! Analiso seu negócio digital por completo, identificando pontos de melhoria e oportunidades que outros não veem.
+                </p>
+                <a href="#contato" class="inline-block px-8 py-4 bg-cyan-600 text-white font-bold rounded-full shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                    Descubra o Problema do Seu Negócio
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center">
+                <img src="imagens/ilustracaotopo.png" alt="Ilustração Médico de Negócios" class="rounded-xl shadow-2xl max-w-full h-auto">
+            </div>
+        </section>
+
+        <section id="servicos" class="py-16 px-8 bg-gray-950 text-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-cyan-400">Nossos Serviços</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400">Diagnóstico Digital Completo</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Vamos além do óbvio. Analisamos todas as vertentes do seu negócio digital: do tráfego às vendas, do conteúdo à experiência do cliente, identificando gargalos e ineficiências.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+                            <li>Análise de Tráfego e Campanhas</li>
+                            <li>Otimização de Conversão (CRO)</li>
+                            <li>Estratégia de Conteúdo e SEO</li>
+                            <li>Experiência do Usuário (UX)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400">Prescrição de Estratégias</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Após o diagnóstico, criamos um plano de ação detalhado e personalizado, com soluções práticas e inovadoras para impulsionar seus resultados. Não é receita de bolo, é cirurgia de precisão!
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+                            <li>Plano de Ação Detalhado</li>
+                            <li>Recomendações de Ferramentas</li>
+                            <li>Otimização de Funil de Vendas</li>
+                            <li>Orientação para Equipe Interna</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400">Acompanhamento e Mentoria</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Não te deixamos na mão. Oferecemos acompanhamento contínuo e sessões de mentoria para garantir que as estratégias sejam implementadas corretamente e gerem o impacto esperado.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+                            <li>Suporte Contínuo</li>
+                            <li>Sessões de Dúvidas</li>
+                            <li>Análise de Resultados Periódica</li>
+                            <li>Ajustes Estratégicos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                      <a href="https://api.whatsapp.com/send?phone=5521997857460&text=Poderia%20me%20dar%20mais%20informações%20sobre%20o%20serviço%20de%20gestão%20de%20trafego%3F" target="_blank" class="inline-block px-8 py-4 bg-cyan-600 text-white font-bold rounded-full shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                       Agende Sua Análise Gratuita!
+                     </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-16 px-8 text-white">
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-extrabold mb-6 text-cyan-400">Por Que um Médico de Negócios?</h2>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        No universo digital, muitos prestadores de serviço são como especialistas que só olham para um dedo do paciente. O **gestor de tráfego** foca nos anúncios, o **social media** nas redes sociais, e assim por diante. Eles são ótimos em suas áreas, mas podem perder a visão do todo.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                        Eu, como seu **Médico de Negócios**, atuo de forma diferente. Minha abordagem é **holística**. Assim como um médico que analisa todos os sintomas e histórico do paciente antes de um diagnóstico, eu mergulho profundamente em **TODAS as áreas do seu negócio digital**.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Meu objetivo é identificar não apenas os *sintomas* (baixa conversão, pouco tráfego qualificado), mas a *causa raiz* dos problemas, oferecendo um tratamento completo e integrado para a **saúde digital do seu negócio**. É a diferença entre um especialista que cuida de um problema específico e um médico que entende a complexidade do corpo.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center">
+                    <img src="imagens/mediconegocios.png" alt="Ilustração Visão Holística" class="rounded-xl shadow-2xl max-w-[70%] h-auto">
+                </div>
+            </div>
+        </section>
+
+        <section id="artigos" class="py-16 px-8 bg-gray-950 text-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-cyan-400">Artigos e Insights</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition duration-300 ease-in-out">
+                        <img src="https://via.placeholder.com/400x250?text=Marketing+Digital+1" alt="Capa Artigo 1" class="rounded-lg mb-4 w-full h-auto">
+                        <h3 class="text-2xl font-bold mb-3 text-cyan-400">5 Mitos do Tráfego Pago que Prejudicam Seu Negócio</h3>
+                        <p class="text-gray-300 mb-4">Descubra as verdades por trás dos mitos mais comuns do marketing digital e pare de perder dinheiro...</p>
+                        <a href="#" class="text-cyan-400 font-semibold hover:underline">Ler Artigo &rarr;</a>
+                    </article>
+                    <article class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition duration-300 ease-in-out">
+                        <img src="https://via.placeholder.com/400x250?text=Marketing+Digital+2" alt="Capa Artigo 2" class="rounded-lg mb-4 w-full h-auto">
+                        <h3 class="text-2xl font-bold mb-3 text-cyan-400">Como a Experiência do Cliente Impacta Suas Vendas</h3>
+                        <p class="text-gray-300 mb-4">Não é só preço! Entenda como a jornada do cliente online pode ser o diferencial para o seu sucesso...</p>
+                        <a href="#" class="text-cyan-400 font-semibold hover:underline">Ler Artigo &rarr;</a>
+                    </article>
+                    <article class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition duration-300 ease-in-out">
+                        <img src="https://via.placeholder.com/400x250?text=Marketing+Digital+3" alt="Capa Artigo 3" class="rounded-lg mb-4 w-full h-auto">
+                        <h3 class="text-2xl font-bold mb-3 text-cyan-400">SEO para Iniciantes: Guia Rápido para Aparecer no Google</h3>
+                        <p class="text-gray-300 mb-4">Desvende os segredos do SEO e comece a atrair mais tráfego orgânico para o seu site hoje mesmo...</p>
+                        <a href="#" class="text-cyan-400 font-semibold hover:underline">Ler Artigo &rarr;</a>
+                    </article>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="artigos.html" class="px-8 py-4 bg-cyan-600 text-white font-bold rounded-full shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                        Ver Todos os Artigos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 px-8 text-white">
+            <div class="container mx-auto text-center md:text-left">
+                <h2 class="text-4xl font-extrabold mb-8 text-cyan-400">Pronto para a Saúde do seu Negócio?</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    "Era isso que eu precisava para meu negócio." Preencha o formulário abaixo e vamos diagnosticar o que seu negócio realmente precisa.
+                </p>
+                <div class="max-w-xl mx-auto bg-gray-900 p-8 rounded-xl shadow-2xl border border-gray-700">
+                    <form action="https://formspree.io/f/xkgbwglk" method="POST" class="space-y-6">
+                        <div>
+                            <label for="nome" class="block text-lg font-medium text-gray-200 mb-2">Seu Nome</label>
+                            <input type="text" id="nome" name="nome" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:ring-cyan-600 focus:border-cyan-600 outline-none" placeholder="Seu Nome Completo">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-gray-200 mb-2">Seu Melhor E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:ring-cyan-600 focus:border-cyan-600 outline-none" placeholder="exemplo@dominio.com">
+                        </div>
+                        <div>
+                            <label for="telefone" class="block text-lg font-medium text-gray-200 mb-2">Telefone (WhatsApp)</label>
+                            <input type="tel" id="telefone" name="telefone" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:ring-cyan-600 focus:border-cyan-600 outline-none" placeholder="(XX) XXXXX-XXXX">
+                        </div>
+                        <div>
+                            <label for="mensagem" class="block text-lg font-medium text-gray-200 mb-2">Como posso te ajudar?</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:ring-cyan-600 focus:border-cyan-600 outline-none" placeholder="Descreva brevemente seu negócio e o que busca..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-8 py-4 bg-cyan-600 text-white font-bold rounded-full shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-950 text-white p-6 mt-12 rounded-t-lg shadow-inner">
+            <div class="container mx-auto text-center text-sm">
+                <p>&copy; 2025 GRUPO PORTEL. Todos os direitos reservados. "Um médico sabe o problema antes do paciente dizer."</p>
+                <p class="mt-2">Desenvolvido com paixão e inteligência artificial.</p>
+                <div class="flex justify-center mt-4 space-x-4">
+                    <a href="https://instagram.com/grupoportel" target="_blank" class="text-white hover:text-cyan-400 transition duration-300">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.715.01 3.657.042 3.658.118 5.378 1.838 5.498 5.498.032.942.042 1.227.042 3.657s-.01 2.715-.042 3.657c-.118 3.658-1.838 5.378-5.498 5.498-.942.032-1.227.042-3.657.042s-2.715-.01-3.657-.042c-3.658-.118-5.378-1.838-5.498-5.498-.032-.942-.042-1.227-.042-3.657s.01-2.715.042-3.657c.118-3.658 1.838-5.378 5.498-5.498.942-.032 1.227-.042 3.657-.042ZM12 4.417c-2.841 0-3.111.01-4.029.043C4.09 4.606 2.656 6.039 2.523 7.971c-.033.918-.043 1.189-.043 4.029s.01 3.111.043 4.029c.133 1.932 1.566 3.366 3.498 3.498.918.033 1.189.043 4.029.043s3.111-.01 4.029-.043c1.932-.133 3.366-1.566 3.498-3.498.033-.918.043-1.189.043-4.029s-.01-3.111-.043-4.029c-.133-1.932-1.566-3.366-3.498-3.498-.918-.033-1.189-.043-4.029-.043Zm0 2.227c3.084 0 5.589 2.505 5.589 5.589S15.084 18.005 12 18.005 6.411 15.499 6.411 12 8.916 6.644 12 6.644Zm0 2.227c-1.854 0-3.362 1.508-3.362 3.362s1.508 3.362 3.362 3.362 3.362-1.508 3.362-3.362-1.508-3.362-3.362-3.362Zm5.725-4.851A1.31 1.31 0 0 1 18.31 5.31c-.347 0-.629.282-.629.629s.282.629.629.629c.347 0 .629-.282.629-.629a1.31 1.31 0 0 1-1.309-1.31Z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('-translate-x-full');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking outside (optional, but good UX)
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('-translate-x-full')) {
+                toggleMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
